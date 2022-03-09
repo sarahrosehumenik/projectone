@@ -47,10 +47,6 @@ spaces.innerHTML = randomArray.join(' ')
 
 
 
-
-  
-
-
 let tries = 10 
 
 let guess = buttonArray.addEventListener('click', event) 
@@ -65,38 +61,30 @@ let guess = buttonArray.addEventListener('click', event)
         
 console.log(evt.target)
 
-     
-
-    
-       
-     
-      
       }
     }
 
 
   
-     outcome.innerHTML= "Thats whats up";
+     outcome.innerHTML= "Your choice passes the vibe check.";
      evt.target.style.backgroundColor = "#D192BA";
      evt.target.disabled = "true"
     
     } else {
       tries -= 1; 
-      outcome.innerHTML = "you have " + tries + " tries left";
+      outcome.innerHTML = `Low-key you have ${tries} tries left`;
       evt.target.style.backgroundColor = "red"
       evt.target.disabled = "true"
     if(tries === 0){
       
-      outcome.innerHTML = "Its the we are all going to die for me"
+      outcome.innerHTML = "ITS THE WE ARE ALL GOING TO DIE FOR ME"
       outcome.style.color = "#55FE01"
+      spaces.innerHTML = randomWord;
       buttonArray.removeEventListener('click', event )
       
     
     }
-     
-      
-     
-    } 
+     } 
       
    if(!randomArray.includes("_") ) {
      outcome.innerHTML = "ITS THE SAVING MANKIND FOR ME"
