@@ -91,17 +91,17 @@ padding: 25px 0 0 35px;
 
 }
 
-button {
+#key {
 background-color:  #000000;
 color: #0d5f51;
 font-size: 40px;
-border: 3px solid #0d5f51;
+border: 2px solid #c98697;
 transition-duration: 0.4s;
 width: 50px;
 height: 50px;
 }
 
-button:hover {
+#key:hover {
 background-color: #a39e00; /* Green */
 color: #b32727;
 }
@@ -135,3 +135,15 @@ margin: ;
  justify-content: center;
 }
 
+#restart {
+    display: block;
+    margin: 30px auto;
+    border: 5px solid #0004ff;
+    font-size: 25px;
+    background-color:#070707;
+    color:#0004ff;
+}
+
+#restart:hover {
+    background-color:#ff0000;
+}

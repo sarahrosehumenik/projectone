@@ -1,3 +1,6 @@
+
+
+
 const buttonArray = document.getElementById('keyboard');
 console.log(buttonArray)
 
@@ -5,7 +8,7 @@ console.log(buttonArray)
 
 //WORDS RELATING TO GEN Z
 
-let words = ["STAN", "CRINGE", "SIMP", "SHEEEESH", "BUSSIN", "SNATCHED", "CLAPBACK", "SKRRT", "PERIODT", "FLEX", "SUS", "SHOOK", "RECIEPTS", "SLAPS", "SHADE", "EXTRA", "GUCCI", "LIT", "RATCHET", "SAVAGE", "THIRSTY", "UNALIVE", "STORYTIME", "USSY", "BRUH","STUDIOUS", "NEUROTYPICALS", "WOMBLANDS", "GRWM", "CHUBBABUN", "THICC"]
+ let words = ["STAN", "CRINGE", "SIMP", "SHEEEESH", "BUSSIN", "SNATCHED", "CLAPBACK", "SKRRT", "PERIODT", "FLEX", "SUS", "SHOOK", "RECIEPTS", "SLAPS", "SHADE", "EXTRA", "GUCCI", "LIT", "RATCHET", "SAVAGE", "THIRSTY", "UNALIVE", "STORYTIME", "USSY", "BRUH","STUDIOUS", "NEUROTYPICALS", "WOMBLANDS", "GRWM", "CHUBBABUN", "THICC"]
 
 //this generates a random word from the words array
 let randomWord =
@@ -94,6 +97,18 @@ console.log(evt.target)
    }
   
     }
+
+    const reloadtButton = document.querySelector("#reload");
+// Reload everything:
+function reload() {
+    reload = location.reload();
+}
+// Event listeners for reload
+reloadButton.addEventListener("click", reload, false);
+      
+            
+          
+      
 
 
 
