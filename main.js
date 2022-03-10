@@ -30,19 +30,9 @@ let outcome = document.getElementById('outcome')
 
 
 
-
-
-
-
 //this displays the spaces on the website
 let spaces = document.querySelector('p')
-
 spaces.innerHTML = randomArray.join(' ')
-
-
-
-  
-
 
 
 let tries = 10 
@@ -82,7 +72,7 @@ for (let i = 0; i < randomWord.length; i++){
 
 
 //the outcome if you are out of quesses aka game over/ disable ability to click all buttons
-if(tries === 0){
+if (tries === 0){
     outcome.innerHTML = "ITS THE WE ARE ALL GOING TO DIE FOR ME"
     outcome.style.color = "#55FE01"
     spaces.innerHTML = randomWord;
@@ -92,7 +82,7 @@ if(tries === 0){
       
 
 //the outcomes for winnning/ disable ability to click all buttons
-if(!randomArray.includes("_") ) {
+if (!randomArray.includes("_") ) {
      outcome.innerHTML = "ITS THE SAVING MANKIND FOR ME"
      outcome.style.color = "#FE0199"
      outcome.style.fontSize = "35px"
@@ -115,10 +105,10 @@ function reload() {
 reloadButton.addEventListener("click", reload, false);
       
             
-          
-      
-
-
+ //spacing and indentation follows general rules while also creating and making a personal style
+ 
+ 
+//all notes passed this is psuedo code and discarded code that i may want to access at a later time.
 
 // let guess = buttonArray.addEventListener('click', function(evt) {
 // console.log(evt)
