@@ -20,3 +20,5 @@ To begin, click the first letter of your choice.
 - Adding an urban dictionary game mode which would require you to guess the password of any difficulty and then pick out of a multiple choice option of what you think the definition is, you must get both correct to win. No cheating! 
 
 - Adding a change in styling per level or game mode. 
+
+-Media queries. 
