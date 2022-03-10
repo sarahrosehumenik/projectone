@@ -1,34 +1,29 @@
 
-
-
-const buttonArray = document.getElementById('keyboard');
-console.log(buttonArray)
-
+//this grabs all the buttons in the keyboard section
+const keyButtons = document.getElementById('keyboard');
+console.log(keyButtons)
 
 
 //WORDS RELATING TO GEN Z
+let words = ["STAN", "CRINGE", "SIMP", "SHEEEESH", "BUSSIN", "SNATCHED", "CLAPBACK", "SKRRT", "PERIODT", "FLEX", "SUS", "SHOOK", "RECIEPTS", "SLAPS", "SHADE", "EXTRA", "GUCCI", "LIT", "RATCHET", "SAVAGE", "THIRSTY", "UNALIVE", "STORYTIME", "USSY", "BRUH","STUDIOUS", "NEUROTYPICALS", "WOMBLANDS", "GRWM", "CHUBBABUN", "THICC"]
 
- let words = ["STAN", "CRINGE", "SIMP", "SHEEEESH", "BUSSIN", "SNATCHED", "CLAPBACK", "SKRRT", "PERIODT", "FLEX", "SUS", "SHOOK", "RECIEPTS", "SLAPS", "SHADE", "EXTRA", "GUCCI", "LIT", "RATCHET", "SAVAGE", "THIRSTY", "UNALIVE", "STORYTIME", "USSY", "BRUH","STUDIOUS", "NEUROTYPICALS", "WOMBLANDS", "GRWM", "CHUBBABUN", "THICC"]
 
 //this generates a random word from the words array
 let randomWord =
 words[Math.floor(words.length * Math.random())];
 console.log(randomWord)
 
+
 //this makes the random word chosen into an array
 let randomArray = randomWord.split('')
 
 
 
-
 //create spaces on the baord that equal the length of the randomword 
-
-  
 for (let i = 0; i < randomArray.length; i++) {
-  randomArray[i] = "_";
-  
+     randomArray[i] = "_";
 }
-  console.log(randomArray)
+console.log(randomArray)
 
 //creating element to put prompt
 let outcome = document.getElementById('outcome')
@@ -52,57 +47,70 @@ spaces.innerHTML = randomArray.join(' ')
 
 let tries = 10 
 
-let guess = buttonArray.addEventListener('click', event) 
+keyButtons.addEventListener('click', event) 
   function event(evt) {
   if (randomWord.includes(evt.target.textContent)) {
+//if the randomized word includes the html text content in the button pushed 
+//then...
 
-    for (let i = 0; i < randomWord.length; i++){
-      if(evt.target.textContent === randomWord[i]){
-    randomArray[i] = evt.target.textContent
-        spaces.innerHTML = randomArray.join(' ')
-        console.log(randomArray)
+
+//display it in proper the space on the ganeboard
+for (let i = 0; i < randomWord.length; i++){
+
+    if(evt.target.textContent === randomWord[i]){
+         randomArray[i] = evt.target.textContent
+         spaces.innerHTML = randomArray.join(' ')
+         console.log(randomArray)
+    }
+}
+
+
+//also change the prompt for if true and disable button clicked. change button color.
+    outcome.innerHTML= "Your choice passes the vibe check.";
+    evt.target.style.backgroundColor = "#D192BA";
+    evt.target.disabled = "true"
         
-console.log(evt.target)
-
-      }
-    }
+} else {
 
 
-  
-     outcome.innerHTML= "Your choice passes the vibe check.";
-     evt.target.style.backgroundColor = "#D192BA";
-     evt.target.disabled = "true"
-    
-    } else {
-      tries -= 1; 
-      outcome.innerHTML = `Low-key you have ${tries} tries left`;
-      evt.target.style.backgroundColor = "red"
-      evt.target.disabled = "true"
-    if(tries === 0){
+//if false change inner html and countdown tries. disable button when clicked. change button color. 
+    tries -= 1; 
+    outcome.innerHTML = `Low-key you have ${tries} tries left`;
+    evt.target.style.backgroundColor = "#ff0000";
+    evt.target.disabled = "true"
+
+
+
+//the outcome if you are out of quesses aka game over/ disable ability to click all buttons
+if(tries === 0){
+    outcome.innerHTML = "ITS THE WE ARE ALL GOING TO DIE FOR ME"
+    outcome.style.color = "#55FE01"
+    spaces.innerHTML = randomWord;
+    buttonArray.removeEventListener('click', event )
+}
+ }  
       
-      outcome.innerHTML = "ITS THE WE ARE ALL GOING TO DIE FOR ME"
-      outcome.style.color = "#55FE01"
-      spaces.innerHTML = randomWord;
-      buttonArray.removeEventListener('click', event )
-      
-    
-    }
-     } 
-      
-   if(!randomArray.includes("_") ) {
+
+//the outcomes for winnning/ disable ability to click all buttons
+if(!randomArray.includes("_") ) {
      outcome.innerHTML = "ITS THE SAVING MANKIND FOR ME"
      outcome.style.color = "#FE0199"
      outcome.style.fontSize = "35px"
-      buttonArray.removeEventListener('click', event )
-   }
-  
+     buttonArray.removeEventListener('click', event )
+}
     }
+    
+    
+const reloadtButton = document.querySelector("#reload");
 
-    const reloadtButton = document.querySelector("#reload");
-// Reload everything:
+
+//the laziest restart button   
+// Reload everything
 function reload() {
     reload = location.reload();
 }
+
+
 // Event listeners for reload
 reloadButton.addEventListener("click", reload, false);
       
