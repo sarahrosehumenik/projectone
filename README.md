@@ -1,6 +1,6 @@
 # Welcome to FORCEFIELD
 
-![](https://i.imgur.com/Cl8ibJK.jpg)
+![](https://i.imgur.com/stiMXKq.jpg)
 
 
 to create this game i used HTML, CSS and JavaScript
