@@ -66,9 +66,10 @@ for (let i = 0; i < randomWord.length; i++){
 //if false change inner html and countdown tries. disable button when clicked. change button color. 
     tries -= 1; 
     outcome.innerHTML = `Low-key you have ${tries} tries left`;
+    if(evt.target.id === "key") {
     evt.target.style.backgroundColor = "#ff0000";
     evt.target.disabled = "true"
-
+    }
 
 
 //the outcome if you are out of quesses aka game over/ disable ability to click all buttons

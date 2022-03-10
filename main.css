@@ -65,7 +65,7 @@ p {
     grid-row: 1/3;
     object-fit: fill;
     position: relative;
-    item-align: center;
+    
     margin: -10;
     
 }
@@ -74,7 +74,7 @@ p {
     display: flex;
     grid-column-start: 3;
     grid-row-start: 1;
-    object-fit: ;
+ 
     align-content: center;
     padding: 10px;
     filter: drop-shadow(0 0 0.85rem rgb(204, 0, 255));
@@ -84,7 +84,7 @@ p {
     display: flex;
     grid-column-start: 3;
     grid-row-start: 2;
-    object-fit: ;
+    
     align-content: center;
     padding: 25px 0 0 35px;
     
