@@ -77,7 +77,7 @@ if (tries === 0){
     outcome.innerHTML = "ITS THE WE ARE ALL GOING TO DIE FOR ME"
     outcome.style.color = "#55FE01"
     spaces.innerHTML = randomWord;
-    buttonArray.removeEventListener('click', event )
+    keyButtons.removeEventListener('click', event )
 }
  }  
       
@@ -87,7 +87,7 @@ if (!randomArray.includes("_") ) {
      outcome.innerHTML = "ITS THE SAVING MANKIND FOR ME"
      outcome.style.color = "#FE0199"
      outcome.style.fontSize = "35px"
-     buttonArray.removeEventListener('click', event )
+     keyButtons.removeEventListener('click', event )
 }
     }
     
