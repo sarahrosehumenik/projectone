@@ -86,7 +86,7 @@ if (tries === 0){
 if (!randomArray.includes("_") ) {
      outcome.innerHTML = "ITS THE SAVING MANKIND FOR ME"
      outcome.style.color = "#FE0199"
-     outcome.style.fontSize = "35px"
+     outcome.style.fontSize = "4vh"
      keyButtons.removeEventListener('click', event )
 }
     }
